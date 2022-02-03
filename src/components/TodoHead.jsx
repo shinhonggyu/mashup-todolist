@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTodoState } from "../TodoContext";
 
 const TodoHeadBlock = styled.div`
   padding-top: 48px;
@@ -28,6 +29,8 @@ const TodoHeadBlock = styled.div`
 `;
 
 function TodoHead() {
+  const todos = useTodoState();
+
   return (
     <TodoHeadBlock>
       <h1>2022년 2월 3일</h1>
